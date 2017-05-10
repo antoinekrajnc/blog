@@ -1,26 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class="jumbotron">
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1 class="display-3">
+    <% @most_recent_post.each do |most_recent_post|%>
+    <%= most_recent_post.title %>
+  </h1>
+    <p class="lead"><%=most_recent_post.content[0..75]%>...</p>
+    <hr class="my-4">
+    <p class="lead">
+    <%=link_to "Read more", most_recent_post, class: ""%>
+  </p>
+  <%end%>
+</div>
 
-  <tbody>
+<div class="">
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="<%=post.avatar(:medium)%>" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title"><%=post.title%></h4>
+          <p class="card-text"><%=post.content[0..30]%>...</p>
+          <%=link_to "Read more", post, class:""%>
+        </div>
+      </div>
+      <br>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+</div>
