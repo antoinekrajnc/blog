@@ -1,4 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @post.avatar.url(:medium)%>
+<h1><%=@post.title %></h1>
+<div>
+  <p><%=@post.content %></p>
+</div>
+<div>
+  <%=@post.category %>
+</div>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

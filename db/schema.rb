@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508063050) do
+ActiveRecord::Schema.define(version: 20170510175209) do
+
+  create_table "paperclip_images", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "asset_file_name"
+    t.string "asset_content_type"
+    t.integer "asset_file_size"
+    t.datetime "asset_updated_at"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -18,6 +27,10 @@ ActiveRecord::Schema.define(version: 20170508063050) do
     t.string "title"
     t.text "content"
     t.string "category"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end
