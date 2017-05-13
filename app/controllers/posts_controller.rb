@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     @most_recent_post = Post.order("created_at DESC").limit(1)
   end
 
+  def admin
+    @posts = Post.all
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show

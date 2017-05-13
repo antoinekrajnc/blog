@@ -1,23 +1,24 @@
-<p id="notice"><%= notice %></p>
+<head>
+  <title>VNAK</title>
+</head>
 
-<div class="jumbotron">
+<% @most_recent_post.each do |most_recent_post|%>
+  <div class="jumbotron rounded-0 rounded-bottom d-flex flex-column justify-content-center" style="background-image: url('<%=most_recent_post.avatar%>')">
+      <h1 class="display-3 text-white">
+        <%= most_recent_post.title %>
+      </h1>
+        <p class="lead mt-5">
+        <%=link_to "Read more", most_recent_post, class: "button-jumbotron"%>
+      </p>
+  </div>
+<%end%>
 
-  <h1 class="display-3">
-    <% @most_recent_post.each do |most_recent_post|%>
-    <%= most_recent_post.title %>
-  </h1>
-    <p class="lead"><%=most_recent_post.content[0..75]%>...</p>
-    <hr class="my-4">
-    <p class="lead">
-    <%=link_to "Read more", most_recent_post, class: ""%>
-  </p>
-  <%end%>
-</div>
-
-<div class="">
+<div class="d-flex flex-row justify-content-center flex-wrap">
     <% @posts.each do |post| %>
-      <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="<%=post.avatar(:medium)%>" alt="Card image cap">
+      <div class="card m-4" style="width: 18rem;">
+        <%if post.avatar_file_name != nil %>
+        <img class="card-img-top" src="<%=post.avatar(:medium)%>" alt="<%=post.avatar_file_name%>">
+        <%end%>
         <div class="card-block">
           <h4 class="card-title"><%=post.title%></h4>
           <p class="card-text"><%=post.content[0..30]%>...</p>

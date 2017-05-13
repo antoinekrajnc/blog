@@ -14,6 +14,60 @@
  *= require_self
  */
 
+ * {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+ a {
+   color:#666;
+   text-decoration: none;
+ }
+
+ a:visited {
+   color:#666;
+ }
+
+ a:hover{
+   background-color: none;
+   color:#2ECC41;
+   border-bottom: 2px solid #2ECC41;
+   text-decoration: none;
+ }
+
+ a:focus{
+   color:#2ECC41;
+   text-decoration: none;
+ }
+
+.navbar {
+  background: black;
+}
+
+.jumbotron {
+  height:85vh;
+  text-align: center;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.button-jumbotron {
+  font-weight: 100;
+  color: #2ECC41;
+  border:2px solid #2ECC41;
+  padding:0.6rem;
+  border-radius: .3rem;
+}
+
+.button-jumbotron:visited {
+  color:#2ECC41;
+}
+
+.post-content {
+  line-height: 200%;
+  font-weight: 200;
+}
+
 .container {
   width: 90%;
 }
@@ -27,10 +81,10 @@
  }
 
  .footer-title {
-   font-size:10px;
+   font-size:11px;
    color:#666;
  }
 
  .footer-list a {
-   font-size:8px;
+   font-size:9px;
  }
