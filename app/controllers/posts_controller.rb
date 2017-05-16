@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, except: [:index, :show]
 
   # GET /posts
   # GET /posts.json
@@ -10,6 +11,7 @@ class PostsController < ApplicationController
 
   def admin
     @posts = Post.all
+    render layout: false
   end
 
   # GET /posts/1
@@ -61,7 +63,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to admin, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -74,6 +76,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.fetch(:post).permit(:title, :content, :category, :avatar)
+      params.fetch(:post).permit(:title, :content, :info, :category, :avatar, :subtitle)
     end
 end

@@ -5,8 +5,17 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "paperclip", "~> 5.0.0"
 
+# Simple Form
+gem 'simple_form'
+# jquery
+gem 'jquery-rails'
+# Devise Gem to authenticate Admins
+gem 'devise'
+# Add images to posts
+gem "paperclip", "~> 5.0.0"
+# Add possibility to edit the text in the paragraphs
+gem 'ckeditor', '~> 4.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 # Use sqlite3 as the database for Active Record

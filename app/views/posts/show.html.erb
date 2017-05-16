@@ -10,7 +10,7 @@
 <div class="d-flex flex-column justify-content-center align-items-center m-5 text-justify">
   <h1><%=@post.title %></h1>
   <div>
-    <p><%=simple_format(@post.content , class:"post-content") %></p>
+    <%= raw @post.content %>
   </div>
   <%= link_to 'Back', posts_path %>
 </div>
