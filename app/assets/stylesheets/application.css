@@ -14,33 +14,45 @@
  *= require_self
  */
 
- * {
+* {
     font-family: 'Montserrat', sans-serif;
   }
 
- a {
+a {
    color:#666;
    text-decoration: none;
  }
 
- a:visited {
+a:visited {
    color:#666;
  }
 
- a:hover{
+a:hover {
    background-color: none;
    color:#2ECC41;
    border-bottom: 2px solid #2ECC41;
    text-decoration: none;
  }
 
- a:focus{
+a:focus {
    color:#2ECC41;
    text-decoration: none;
  }
 
 .btn-success {
   background:#2ECC41;
+}
+
+.create-post-btn {
+  width: 20rem;
+}
+
+.form-input {
+  width: 70%;
+}
+
+label {
+  margin-right: 2rem;
 }
 
 .navbar {
@@ -76,15 +88,15 @@
   width: 90%;
 }
 
- footer {
+footer {
    background:#353537;
  }
 
- .footer-title {
+.footer-title {
    font-size:11px;
    color:#666;
  }
 
- .footer-list a {
+.footer-list a {
    font-size:9px;
  }
