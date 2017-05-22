@@ -29,7 +29,6 @@ a:visited {
 
 a:hover {
    background-color: none;
-   color:#2ECC41;
    border-bottom: 2px solid #2ECC41;
    text-decoration: none;
  }
@@ -67,9 +66,24 @@ label {
   background-size:cover;
 }
 
+
+.display-4{
+  text-shadow: 1px 2px 5px black;
+}
+
+.display-5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.most-recent-post-content {
+  width: 50%;
+}
+
 .button-jumbotron {
   font-weight: 100;
-  color: #2ECC41;
+  background-color: #2ECC41;
+  color: white;
   border:2px solid #2ECC41;
   padding:0.6rem;
   border-radius: .3rem;
@@ -79,13 +93,27 @@ label {
   color:#2ECC41;
 }
 
-.post-content {
+.post-content-index, .most-recent-post-content {
   line-height: 200%;
-  font-weight: 200;
+}
+
+.post-content {
+  width: 50%;
+  line-height: 250%;
+  margin:auto;
 }
 
 .container {
   width: 90%;
+}
+
+#share-ul {
+  position: fixed;
+  top:150px;
+}
+
+#share-ul a:hover {
+  border-bottom: none;
 }
 
 footer {
@@ -93,10 +121,10 @@ footer {
  }
 
 .footer-title {
-   font-size:11px;
+   font-size:1rem;
    color:#666;
  }
 
 .footer-list a {
-   font-size:9px;
+   font-size:0.7rem;
  }
