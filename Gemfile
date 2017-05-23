@@ -15,7 +15,7 @@ gem 'devise'
 # Add images to posts
 gem "paperclip", "~> 5.0.0"
 # Add possibility to edit the text in the paragraphs
-gem 'ckeditor', '~> 4.1'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 # Use Puma as the app server
