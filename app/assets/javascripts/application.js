@@ -13,6 +13,14 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
+
+$(function() {
+  $('.directUpload').find("input:file").each(function(i, elem) {
+    var fileInput    = $(elem);
+    console.log(fileInput);
+  });
+});

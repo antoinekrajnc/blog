@@ -10,8 +10,11 @@ end
 gem 'simple_form'
 # jquery
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Devise Gem to authenticate Admins
 gem 'devise'
+# Interact with AWS and Heroku
+gem 'aws-sdk', '~> 2'
 # Add images to posts
 gem "paperclip", "~> 5.0.0"
 # Add possibility to edit the text in the paragraphs

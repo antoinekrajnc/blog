@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, except: [:index, :show]
+  before_action :set_s3_direct_post, only: [:new, :edit, :create, :update]
 
   # GET /posts
   # GET /posts.json
@@ -77,5 +78,9 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.fetch(:post).permit(:title, :content, :info, :category, :avatar, :subtitle)
+    end
+
+    def set_s3_direct_post
+      @s3_direct_post = Aws::S3::Resource.new.bucket(ENV['S3_BUCKET']).presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')
     end
 end
