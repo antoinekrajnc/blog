@@ -3,7 +3,7 @@
 </head>
 
 <% @most_recent_post.each do |most_recent_post|%>
-  <div class="jumbotron rounded-0 d-flex flex-column justify-content-center align-items-center" style="background-image: url('<%=most_recent_post.avatar%>')">
+  <div class="jumbotron rounded-0 d-flex flex-column justify-content-center align-items-center" style="background-image: url('<%=most_recent_post.avatar.url%>')">
       <h1 class="display-4 text-white mt-4">
         <%= most_recent_post.title %>
       </h1>

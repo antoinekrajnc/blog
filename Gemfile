@@ -10,6 +10,8 @@ end
 gem 'simple_form'
 # jquery
 gem 'jquery-rails'
+# Amazon AWS
+gem 'aws-sdk', '~> 2.3'
 # Devise Gem to authenticate Admins
 gem 'devise'
 # Add images to posts
