@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <%= simple_form_for(@post, multipart: true) do |f| %>
-=======
-<%= simple_form_for @post, html: {class: "directUpload", data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host } } do |f| %>
->>>>>>> ae966a98c56253c40a34978cc05f8a671e2ca445
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2>
