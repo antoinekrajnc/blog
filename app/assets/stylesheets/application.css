@@ -18,7 +18,7 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-a {
+a, .btn-link{
    color:#666;
    text-decoration: none;
  }
@@ -27,13 +27,13 @@ a:visited {
    color:#666;
  }
 
-a:hover {
+a:hover, .btn-link:hover {
    background-color: none;
    border-bottom: 2px solid #2ECC41;
    text-decoration: none;
  }
 
-a:focus {
+a:focus, .btn-link:focus {
    color:#2ECC41;
    text-decoration: none;
  }

@@ -57,10 +57,10 @@
         <% @posts.each do |post| %>
           <tr>
             <td class="text-center"><%= post.title %></td>
-            <td class="text-center">
-              <%= link_to 'Show', post, :target => "_blank"%>
-              <%= link_to 'Edit', edit_post_path(post), class:"mr-2 ml-2" %>
-              <%= button_to 'Delete',  { action: :destroy, id: post.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <td class="text-center d-flex flex-row align-items-center justify-content-center">
+              <%= link_to 'Show', post, :target => "_blank", class:"btn btn-success text-white"%>
+              <%= link_to 'Edit', edit_post_path(post), class:"btn btn-primary mr-2 ml-2 text-white" %>
+              <%= button_to 'Delete',  { action: :destroy, id: post.id }, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
             </td>
           </tr>
         <% end %>
