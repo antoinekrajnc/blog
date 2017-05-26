@@ -56,11 +56,6 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  ENV["AWS_ACCESS_KEY_ID"]= "AKIAJQU7SKEPJY6QOUXA"
-  ENV["AWS_SECRET_ACCESS_KEY"]='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'
-  ENV["S3_BUCKET_NAME"]="vnak-assets"
-  ENV["AWS_REGION"]="us-west-1"
-
   config.paperclip_defaults = {
   storage: :s3,
   s3_credentials: {
