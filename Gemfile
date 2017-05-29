@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+# Friendly Id for SEO
+gem 'friendly_id', '~> 5.1.0'
 # Simple Form
 gem 'simple_form'
 # jquery
