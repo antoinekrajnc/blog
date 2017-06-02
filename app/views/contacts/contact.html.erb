@@ -1,0 +1,15 @@
+<div class="d-flex flex-column align-items-center justify-content-center m-4 mb-5">
+  <h1 class="mb-4">Contact</h1>
+  <p class="mb-5">If you would like to reach out to us, please fill out that form. We'll answer as soon as possible</p>
+
+  <form method="POST" action="https://formspree.io/your@email.com" class="d-flex flex-column" class="mb-4">
+    <input type="text" name="name" placeholder="Name" class="mb-4 rounded form-control">
+    <input type="email" name="_replyto" placeholder="Email" class="mb-4 rounded form-control" id="ContactEmail">
+    <input type="text" name="_gotcha" style="display:none" />
+    <textarea name="Message" placeholder="Message" class="mb-4 rounded form-control" id="ContactTextarea" rows="4"></textarea>
+    <input type="submit" value="Send" class="btn-success rounded create-post-btn mt-3">
+    <input type="hidden" name="_next" value="/thanks" />
+    <input type="hidden" name="_subject" value="New submission!" />
+  </form>
+
+</div>
