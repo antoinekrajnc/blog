@@ -1,6 +1,8 @@
-<h1>Editing Post</h1>
+<div class="d-flex flex-column align-items-center justify-content-center m-5">
 
-<%= render 'form', post: @post %>
+  <h1 class="mb-5">Editing Post</h1>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', admin_path %>
+  <%= render 'form', post: @post %>
+
+  <%= link_to 'Back', admin_path %>
+</div>
