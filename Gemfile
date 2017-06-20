@@ -10,6 +10,8 @@ end
 gem 'friendly_id', '~> 5.1.0'
 # Simple Form
 gem 'simple_form'
+# Rails ujs
+gem 'rails-ujs'
 # jquery
 gem 'jquery-rails'
 # Amazon AWS

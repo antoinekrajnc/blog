@@ -1,0 +1,27 @@
+<head>
+  <title>VNAK | Startups</title>
+  <meta name="description" content="Come and meet new startupers who started their project">
+</head>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="mb-4 text-center" style="font-size: 3.5rem; font-weight:300;">Startups</h1>
+    <p class="lead text-center">Come and meet new startupers who started their project</p>
+  </div>
+</div>
+
+<div class="d-flex flex-row justify-content-center flex-wrap">
+    <% @posts.each do |post| %>
+      <div class="card m-4" style="width: 18rem;">
+        <%if post.avatar_file_name != nil %>
+        <img class="card-img-top" src="<%=post.avatar(:medium)%>" alt="<%=post.avatar_file_name%>">
+        <%end%>
+        <div class="card-block">
+          <h4 class="card-title"><%=post.title%></h4>
+          <p class="post-content-index"><%= post.subtitle%></p>
+          <%=link_to "Read more", post%>
+        </div>
+      </div>
+      <br>
+    <% end %>
+</div>

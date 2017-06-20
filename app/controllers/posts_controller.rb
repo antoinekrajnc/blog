@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!, except: [:index, :show]
+  before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy, :admin]
 
   # GET /posts
   # GET /posts.json
@@ -9,6 +9,22 @@ class PostsController < ApplicationController
     @most_recent_post = Post.order("created_at DESC").limit(1)
   end
 
+# Entrepreneurship category
+  def entrepreneurship
+    @posts = Post.where(category: "Entrepreneurship")
+  end
+
+# Startups category
+  def startups
+    @posts = Post.where(category: "Startups")
+  end
+
+# Startups category
+  def learn
+    @posts = Post.where(category: "Start a Business")
+  end
+
+# Admin page
   def admin
     @posts = Post.all
     render layout: false

@@ -20,13 +20,6 @@
         ga('create', 'UA-99984368-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-NNPTNFB');</script>
-    <!-- End Google Tag Manager -->
   </head>
 
   <body>
@@ -47,18 +40,18 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
           <ul class="navbar-nav mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Entrepreneurship</a>
+              <%=link_to "Entrepreneurship", entrepreneurship_path, class:"nav-link"%>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Startups</a>
+              <%=link_to "Startups", startups_path, class:"nav-link"%>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Start a Business</a>
+              <%=link_to "Become an Entrepeneur", learn_path, class:"nav-link"%>
             </li>
             <form class="d-flex flex-row ml-5 mr-5" style="height: 2.1rem;" method="POST" action="https://formspree.io/contact@vnak.co">
               <input class="form-control mr-2" style="width: 12rem;" type="email" placeholder="Email" name="Email">
               <button class="btn btn-outline-success align-self-center" type="submit">Follow</button>
-              <input type="hidden" name="_next" value="" />
+              <input type="hidden" name="_next" value="vnak.co" />
             </form>
           </ul>
         </div>
@@ -69,9 +62,9 @@
       <div class="categories-footer col-4 mt-3">
         <h6 class="footer-title">Categories</h6>
         <ul class="footer-list list-unstyled">
-          <li><a class="text-white" href="#">Entrepreneurship</a></li>
-          <li><a class="text-white" href="#">Startups</a></li>
-          <li><a class="text-white" href="#">Start a Business</a></li>
+          <li><%=link_to "Entrepreneurship", entrepreneurship_path, class:"text-white"%></li>
+          <li><%=link_to "Startups", startups_path, class:"text-white"%></li>
+          <li><%=link_to "Become an Entrepeneur", learn_path, class:"text-white"%></li>
         </ul>
       </div>
       <div class="contact-footer col-4 mt-3">
