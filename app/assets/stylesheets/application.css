@@ -19,8 +19,12 @@
   }
 
 a, .btn-link{
-   color: white;
+   color: #23B684;
    text-decoration: none;
+ }
+
+ .footer-link {
+   color: white;
  }
 
 a:hover, .btn-link:hover,  .btn-outline-success{
