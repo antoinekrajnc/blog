@@ -20,7 +20,7 @@
     <% @posts.each do |post| %>
       <div class="card m-4" style="width: 18rem;">
         <%if post.avatar_file_name != nil %>
-        <img class="card-img-top" src="<%=post.avatar(:medium)%>" alt="<%=post.avatar_file_name%>">
+        <img class="card-img-top" style="height: 200px;" src="<%=post.avatar(:medium)%>" alt="<%=post.avatar_file_name%>">
         <%end%>
         <div class="card-block">
           <h4 class="card-title"><%=post.title%></h4>
