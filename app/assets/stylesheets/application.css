@@ -121,6 +121,10 @@ label {
   border-bottom: none;
 }
 
+.fb-comments {
+  margin:auto;
+}
+
 footer {
    background:#353537;
  }

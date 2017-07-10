@@ -1,7 +1,17 @@
 <head>
   <title><%=@post.title%></title>
   <meta name="description" content="<%=@post.subtitle%>">
+  <meta property="fb:app_id" content="115489915741819" />
 </head>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <p id="notice"><%= notice %></p>
 
@@ -32,9 +42,12 @@
     <%= raw @post.content %>
   </div>
 
-<div class="d-flex justify-content-center mb-5">
-  <%= link_to 'Back', posts_path, class:"back-link" %>
-</div>
+  <div class="d-flex justify-content-center mb-5">
+    <%= link_to 'Back', posts_path, class:"back-link" %>
+  </div>
+
+  <div class="fb-comments d-flex col-9 mb-5" data-width="100%" data-href="http://www.vnak.co/posts" data-numposts="5"></div>
+
 
 <script>
 var span = document.getElementById("share-ul");
